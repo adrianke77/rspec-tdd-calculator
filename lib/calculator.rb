@@ -2,6 +2,7 @@ class Calculator
   def initialize(result)
     @result = result
     @prev_value = nil
+    @redo_value = nil
   end
 
   attr_reader :result
@@ -49,7 +50,14 @@ class Calculator
   end
 
   def undo
+    @redo_value = @result
     @result = @prev_value || @result
     @prev_value = nil
+  end
+
+  def redo
+    @prev_value = @result
+    @result = @redo_value ||  @result
+    @redo_value = nil
   end
 end
