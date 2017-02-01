@@ -62,22 +62,39 @@ describe Calculator do
   describe 'operation' do
     it 'should apply the specified operation' do
       @my_calculator.reset(1)
-      @my_calculator.operation('add',5)
+      @my_calculator.operation('add', 5)
       expect(@my_calculator.result).to eq(6)
-      @my_calculator.operation('subtract',4)
+      @my_calculator.operation('subtract', 4)
       expect(@my_calculator.result).to eq(2)
-      @my_calculator.operation('multiply',3)
+      @my_calculator.operation('multiply', 3)
       expect(@my_calculator.result).to eq(6)
-      @my_calculator.operation('divide',2)
+      @my_calculator.operation('divide', 2)
       expect(@my_calculator.result).to eq(3)
     end
   end
   describe 'undo' do
-    it 'should undo all' do
-    @my_calculator.reset(6)
-    @my_calculator.subtract(3)
-    @my_calculator.undo
-    expect(@my_calculator.result).to eq(6)
+    it 'should undo one step' do
+      @my_calculator.reset(6)
+      @my_calculator.subtract(3)
+      @my_calculator.undo
+      expect(@my_calculator.result).to eq(6)
+    end
+  end
+  describe 'undo' do
+    it 'should undo one step' do
+      @my_calculator.reset(6)
+      @my_calculator.subtract(3)
+      @my_calculator.undo
+      expect(@my_calculator.result).to eq(6)
+    end
+  end
+  describe 'redo' do
+    it 'should redo a previous undo' do
+      @my_calculator.reset(4)
+      @my_calculator.subtract(3)
+      @my_calculator.undo
+      @my_calculator.redo
+      expect(@my_calculator.result).to eq(1)
     end
   end
 end
