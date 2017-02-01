@@ -46,5 +46,18 @@ describe Calculator do
     expect(@my_calculator.result).to eq(3)
     end
   end
+  describe 'chain' do
+   it 'should allow for chaining' do
+   @my_calculator.reset(5)
+   @my_calculator.add(6).subtract(1)
+   expect(@my_calculator.result).to eq(10)
+   @my_calculator.reset(5)
+   @my_calculator.divide(5).mult(10)
+   expect(@my_calculator.result).to eq(10)
+   @my_calculator.reset(10)
+   @my_calculator.subtract(5).add(2)
+   expect(@my_calculator.result).to eq(7)
+   end
+ end
 
 end
