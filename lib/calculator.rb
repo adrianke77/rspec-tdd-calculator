@@ -4,4 +4,7 @@ class Calculator
     @result = result
   end
   attr_reader :result
+  def reset(result)
+    @result = result
+  end
 end

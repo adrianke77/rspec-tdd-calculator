@@ -22,4 +22,11 @@ describe Calculator do
     expect(@my_calculator.result).to eq(5)
     end
   end
+  describe 'Add' do
+    it 'should add to the calculator' do
+    @my_calculator.add(5)
+    expect(@my_calculator.result).to eq(10)
+    end
+  end
+
 end
