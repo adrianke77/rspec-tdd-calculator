@@ -10,4 +10,7 @@ class Calculator
   def add(value_to_add)
     @result +=value_to_add
   end
+  def subtract(value_to_subtract)
+    @result -=value_to_subtract
+  end
 end

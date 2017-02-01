@@ -34,5 +34,11 @@ describe Calculator do
     expect(@my_calculator.result).to eq(7)
     end
   end
+  describe 'Multiply' do
+    it 'should multiply to the calculator' do
+    @my_calculator.mult(3)
+    expect(@my_calculator.result).to eq(21)
+    end
+  end
 
 end
