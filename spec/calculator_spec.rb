@@ -12,7 +12,8 @@ describe Calculator do
     end
   end
   describe 'Result' do
-  it 'should return the current results' do
-    expect(@my_calculator.results).to eq(1)
+    it 'should return the current results' do
+      expect(@my_calculator.results).to eq(1)
+    end
   end
 end
