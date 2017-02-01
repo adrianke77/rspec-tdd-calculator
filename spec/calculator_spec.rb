@@ -6,7 +6,7 @@ describe Calculator do
     @my_calculator = Calculator.new(1)
     # initialize calculator
   end
-    describe 'Initialization' do
+  describe 'Initialization' do
     it 'is an instance of the Calculator class' do
       expect(@my_calculator).to be_instance_of(Calculator)
     end
