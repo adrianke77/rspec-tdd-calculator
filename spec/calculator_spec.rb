@@ -28,5 +28,11 @@ describe Calculator do
     expect(@my_calculator.result).to eq(10)
     end
   end
+  describe 'Subtract' do
+    it 'should subtract from the calculator' do
+    @my_calculator.subtract(3)
+    expect(@my_calculator.result).to eq(7)
+    end
+  end
 
 end

@@ -7,4 +7,7 @@ class Calculator
   def reset(result)
     @result = result
   end
+  def add(value_to_add)
+    @result +=value_to_add
+  end
 end
