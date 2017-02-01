@@ -12,7 +12,14 @@ describe Calculator do
     end
   end
   describe 'Result' do
-  it 'should return the current results' do
-    expect(@my_calculator.results).to eq(1)
+    it 'should return the current results' do
+    expect(@my_calculator.result).to eq(1)
+    end
+  end
+  describe 'Reset' do
+    it 'should reset the calculator to given value' do
+    @my_calculator.reset(5)
+    expect(@my_calculator.result).to eq(5)
+    end
   end
 end
