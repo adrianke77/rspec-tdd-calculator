@@ -40,5 +40,11 @@ describe Calculator do
     expect(@my_calculator.result).to eq(21)
     end
   end
+   describe 'divide' do
+    it 'should divide calculator result by value' do
+    @my_calculator.divide(7)
+    expect(@my_calculator.result).to eq(3)
+    end
+  end
 
 end
