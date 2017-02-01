@@ -1,3 +1,9 @@
 class Calculator
   # your class goes here
-end
+  
+
+  def initialize(result)
+    @result = result
+
+
+  end
