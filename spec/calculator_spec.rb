@@ -11,5 +11,8 @@ describe Calculator do
       expect(@my_calculator).to be_instance_of(Calculator)
     end
   end
-  # Tests go here
+  describe 'Result' do
+  it 'should return the current results' do
+    expect(@my_calculator.results).to eq(1)
+  end
 end
