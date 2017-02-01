@@ -6,14 +6,20 @@ describe Calculator do
     @my_calculator = Calculator.new(1)
     # initialize calculator
   end
-    describe 'Initialization' do
+  describe 'Initialization' do
     it 'is an instance of the Calculator class' do
       expect(@my_calculator).to be_instance_of(Calculator)
     end
   end
   describe 'Result' do
     it 'should return the current results' do
-      expect(@my_calculator.results).to eq(1)
+    expect(@my_calculator.result).to eq(1)
+    end
+  end
+  describe 'Reset' do
+    it 'should reset the calculator to given value' do
+    @my_calculator.reset(5)
+    expect(@my_calculator.result).to eq(5)
     end
   end
 end
