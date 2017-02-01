@@ -30,4 +30,15 @@ class Calculator
     @result /=value_to_divide
     self
   end
+  def operation(method,value_to_operate)
+    if method == "add"
+      self.add(value_to_operate)
+    elsif method == "subtract"
+      self.subtract(value_to_operate)
+    elsif method == "multiply"
+      self.mult(value_to_operate)
+    elsif method == "divide"
+      self.divide(value_to_operate)
+    end
+  end
 end
